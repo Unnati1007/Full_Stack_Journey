@@ -1,0 +1,69 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background: radial-gradient(circle at center, #1a2332 0%, #0b0f19 100%);
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Container & Layout */
+.container {
+    text-align: center;
+    padding: 2rem;
+    z-index: 1;
+}
+
+/* Typography & Animated Text */
+.typing-header {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    user-select: none;
+}
+
+.auto-typed {
+    color: #22c55e;
+    text-shadow: 0 0 15px rgba(34, 197, 94, 0.5);
+    font-weight: 800;
+}
+
+/* Typed.js Cursor Customization */
+.typed-cursor {
+    color: #4b5563;
+    font-weight: 300;
+    animation: blink 0.7s infinite;
+    margin-left: 4px;
+}
+
+/* Blinking Cursor Keyframes */
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .typing-header {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .typing-header {
+        font-size: 2rem;
+    }
+}
