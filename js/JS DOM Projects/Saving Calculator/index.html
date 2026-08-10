@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrowthSaver: Eco-Friendly Savings Calculator</title>
+    <!-- Google Fonts (Poppins) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Feather Icons CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Custom JS -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Column -->
+        <div class="left-column">
+            <!-- Plant Sprout SVG -->
+            <svg class="savings-tree" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <!-- Leaf Sprout -->
+                <path d="M50 80 C50 60, 45 40, 35 30 C30 25, 20 25, 20 30 C20 40, 35 50, 48 60" fill="none" stroke="#2e7d32" stroke-width="4" stroke-linecap="round"/>
+                <path d="M50 80 C50 55, 55 35, 70 25 C75 20, 85 20, 85 25 C85 35, 70 45, 52 58" fill="none" stroke="#2e7d32" stroke-width="4" stroke-linecap="round"/>
+                <path d="M50 90 L50 60" fill="none" stroke="#2e7d32" stroke-width="5" stroke-linecap="round"/>
+                <!-- Green leaves -->
+                <path d="M35 30 C28 20, 15 25, 20 35 C28 42, 35 30, 35 30 Z" fill="#4caf50"/>
+                <path d="M70 25 C77 15, 90 20, 85 30 C77 37, 70 25, 70 25 Z" fill="#4caf50"/>
+            </svg>
+
+            <h1 class="logo-text">GrowthSaver</h1>
+            
+            <p class="description-text">
+                Nurture your financial future with our eco-friendly savings calculator. Watch your money grow like a thriving garden!
+            </p>
+
+            <!-- Triangle Pine Tree SVG -->
+            <svg class="pine-tree" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="60,20 20,90 100,90" fill="#2e7d32"/>
+                <polygon points="60,40 30,90 90,90" fill="#4caf50"/>
+                <circle cx="60" cy="70" r="8" fill="#81c784"/>
+                <rect x="55" y="90" width="10" height="15" fill="#5d4037"/>
+            </svg>
+        </div>
+
+        <!-- Right Column -->
+        <div class="right-column">
+            <!-- Input 1 -->
+            <div class="input-group">
+                <label for="goal-amount">Savings Goal Amount ($)</label>
+                <div class="input-wrapper">
+                    <input type="number" id="goal-amount" placeholder="5000" />
+                    <i data-feather="target" class="input-icon"></i>
+                </div>
+            </div>
+
+            <!-- Input 2 -->
+            <div class="input-group">
+                <label for="current-savings">Current Savings ($)</label>
+                <div class="input-wrapper">
+                    <input type="number" id="current-savings" placeholder="1000" />
+                    <i data-feather="dollar-sign" class="input-icon"></i>
+                </div>
+            </div>
+
+            <!-- Input 3 -->
+            <div class="input-group">
+                <label for="monthly-contribution">Monthly Contribution ($)</label>
+                <div class="input-wrapper">
+                    <input type="number" id="monthly-contribution" placeholder="200" />
+                    <i data-feather="trending-up" class="input-icon"></i>
+                </div>
+            </div>
+
+            <!-- Calculate Button -->
+            <button id="calculate-btn">
+                <i data-feather="refresh-cw"></i>
+                Grow Your Savings
+            </button>
+
+            <!-- Progress Bar Container -->
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+
+            <!-- Results Message -->
+            <div class="result" id="result"></div>
+        </div>
+    </div>
+
+    <!-- Feather Icons Init -->
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            feather.replace();
+        });
+    </script>
+</body>
+</html>
