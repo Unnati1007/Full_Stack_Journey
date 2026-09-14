@@ -1,53 +1,62 @@
-//---Mouse Event-----
+//---Mouse Events---
 
-// Click Event
-document.getElementById('clickButton').onclick = function clickButton() {
-    console.log("Mouse is clicked");
+// 1. Click Event
+function clickHandler() {
+    console.log("Click Event (addEventListener)");
 }
+document.getElementById('clickButton').addEventListener('click', clickHandler);
 
-// Double Click Event
-document.getElementById('doubleClickButton').ondblclick = function dbclickButton() {
-    console.log("Mouse is double clicked");
+// 2. Double Click Event
+function dbClickHandler() {
+    console.log("Double Click Event (addEventListener)");
 }
+document.getElementById('doubleClickButton').addEventListener('dblclick', dbClickHandler);
 
-// Mouse Over Event
-document.getElementById('hoverDiv').onmouseover = function onMouseOverHandler() {
-    console.log("Mouse Hovered");
+// 3. Mouse Over Event
+function mouseOverHandler() {
+    console.log("Mouse Over Event (addEventListener)");
 }
+document.getElementById('hoverDiv').addEventListener('mouseover', mouseOverHandler);
 
-// Mouse Out Event
-document.getElementById('hoverDiv').onmouseout = function onMouseOutHandler() {
-    console.log("Mouse Out");
+// 4. Mouse Out Event
+function mouseOutHandler() {
+    console.log("Mouse Out Event (addEventListener)");
 }
+document.getElementById('hoverDiv').addEventListener('mouseout', mouseOutHandler);
 
 
-//-----Keyboard Event-----
+//---Keyboard Events---
 
-// Key Down Event
-document.getElementById('keyInput').onkeydown = function onkeydownHandler() {
-    console.log("Key Down");
+// 1. Key Down Event
+function keyDownHandler() {
+    console.log("Key Down Event (addEventListener)");
 }
+document.getElementById('keyInput').addEventListener('keydown', keyDownHandler);
 
-// Key Up Event
-document.getElementById('keyInput').onkeyup = function onkeyupHandler() {
-    console.log("Key Up");
+// 2. Key Up Event
+function keyUpHandler() {
+    console.log("Key Up Event (addEventListener)");
 }
+document.getElementById('keyInput').addEventListener('keyup', keyUpHandler);
 
 
-//-----Form Event-----
+//---Form Events---
 
-// Form Submit Event
-document.getElementById('myForm').onsubmit = function onSubmitHandler(event) {
-    event.preventDefault(); // Prevents page from reloading
-    console.log("Form Submitted");
+// 1. Form Submit Event
+function submitHandler(event) {
+    event.preventDefault(); // Prevents page reload
+    console.log("Form Submit Event (addEventListener)");
 }
+document.getElementById('myForm').addEventListener('submit', submitHandler);
 
-// Input Focus Event
-document.getElementById('formInput').onfocus = function onFocusHandler() {
-    console.log("Input Focused");
+// 2. Input Focus Event
+function focusHandler() {
+    console.log("Input Focus Event (addEventListener)");
 }
+document.getElementById('formInput').addEventListener('focus', focusHandler);
 
-// Input Blur Event
-document.getElementById('formInput').onblur = function onBlurHandler() {
-    console.log("Input Blurred");
+// 3. Input Blur Event
+function blurHandler() {
+    console.log("Input Blur Event (addEventListener)");
 }
+document.getElementById('formInput').addEventListener('blur', blurHandler);
