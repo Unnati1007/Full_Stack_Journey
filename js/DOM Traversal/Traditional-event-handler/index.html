@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Traditional Event Handlers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        button {
+            background-color: #d34826;
+            color: #ffffff;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            cursor: pointer;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        div {
+            background-color: #cccccc;
+            text-align: center;
+            padding: 30px 0;
+            font-size: 18px;
+            margin: 20px 0;
+            color: #222222;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #888888;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        body>input {
+            width: calc(100% - 20px);
+            margin: 10px;
+        }
+
+        form {
+            background-color: #ffffff;
+            width: 350px;
+            margin: 40px auto;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            box-sizing: border-box;
+        }
+
+        form input {
+            width: 100%;
+        }
+
+        form button[type="submit"] {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Mouse Events -->
+    <button id="clickButton">Click Me</button>
+    <button id="doubleClickButton">Double Click Me</button>
+    <div id="hoverDiv">Hover over me!</div>
+
+    <!-- Keyboard Events -->
+    <input type="text" id="keyInput" />
+
+    <!-- Form Events -->
+    <form id="myForm">
+        <input type="text" id="formInput" />
+        <button type="submit">Submit</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
